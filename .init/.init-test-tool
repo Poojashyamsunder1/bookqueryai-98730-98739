@@ -1,0 +1,4 @@
+{
+    "command": "pytest",
+    "working_directory": "/home/kavia/workspace/code-generation/bookqueryai-98730-98739/pdf_qa_backend"
+}
