@@ -188,10 +188,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/", tags=["General"])
+@app.get("/health", tags=["General"])
 def health_check():
-    """Health check for server."""
-    return {"message": "Healthy"}
+    """Health check endpoint for server monitoring and liveness probes."""
+    return {"status": "ok", "message": "Healthy"}
 
 # PUBLIC_INTERFACE
 @app.post("/upload_pdf", response_model=UploadPdfResponse, tags=["PDF"], summary="Upload a PDF file and extract its text.", description="Upload a PDF file to the backend. Text extracted and stored by PDF ID.")
